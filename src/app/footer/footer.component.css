@@ -1,13 +1,114 @@
-body{
-    background-color: rgb(66, 55, 82);
-    color: #e90c0c;
+/* CSS */
+.portfolio-footer {
+  background: linear-gradient(90deg, #6012d4 0%, #423752 100%);
+  color: #fff;
+  padding: 40px 0 16px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto 24px auto;
+  padding: 0 24px;
+}
+
+.footer-brand h2 {
+  font-size: 2rem;
+  margin: 0 0 8px 0;
+  letter-spacing: 1px;
+}
+.footer-brand .dot {
+  color: #e90c0c;
+}
+.footer-brand p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.footer-projects h3,
+.footer-contact h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #e90c0c;
+  letter-spacing: 0.5px;
+}
+.footer-projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-projects li {
+  margin-bottom: 6px;
+}
+.footer-projects a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-projects a:hover {
+  color: #e90c0c;
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+.footer-contact .icon {
+  margin-right: 6px;
+}
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-contact a:hover {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+.footer-social a {
+  font-size: 1.5rem;
+  margin-right: 12px;
+  color: #fff;
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.footer-social a:hover {
+  color: #e90c0c;
+  transform: scale(1.15);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.7;
+  border-top: 1px solid #fff2;
+  padding-top: 10px;
+  margin: 0 24px;
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .portfolio-footer {
+    padding: 32px 0 10px 0;
+  }
 }
 
 
 
 
-
-
+/* 
 .card {
     padding: 1rem;
     overflow: hidden;
@@ -177,4 +278,4 @@ body{
       );
     }
   }
-  
+   */
