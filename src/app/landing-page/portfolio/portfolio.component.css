@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+
+   @font-face {
+    font-family: 'Gilroy-Bold', 'Gilroy-Regular', 'Gilroy-SemiBold';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('/fonts/Gilroy-Regular.woff') format('woff'),
+         url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: #1a1a3a;
+  }
+  
+  /* Section principale */
+  .about-me-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  @media (max-height: 600px) {
+    .about-me-section {
+      align-items: flex-start; /* Évite que le contenu soit trop centré sur des écrans très petits */
+      padding-top: 12rem;
+    }
+  }
+  
+
+  
+  /* Conteneur principal */
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Première colonne (titre et citation) */
+  .column1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .main-title {
+    font-size: 3.5rem;
+    font-weight: 750;
+    color: #1A1340;
+    margin-bottom: 0.5rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #1A134080;
+    margin-bottom: 2rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+  
+  
+  /* Conteneur de contenu */
+  .content-container {
+    display: flex;
+    width: 100%;
+    gap: 100px;
+    /* margin-bottom: 1rem; */
+  }
+  
+  /* Contenu textuel */
+  .text-content {
+    flex: 0.2;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+
+
+  
+  /* Contenu visuel */
+  .visual-content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* Ajouté pour permettre le retour à la ligne */
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+
+    gap: 30px; /* Optionnel : espace entre les cartes */
+  }
+  
+
+  .arrow-icon {
+    margin-left: 0.5rem;
+  }
+
+  .btn {
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    padding: 0.8rem 1.1rem;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 62px;
+  }
+
+  @media (max-width: 1200px) {
+    .btn {
+      padding: 0.8rem 0.5rem;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      
+    }
+    }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .content-container {
+      flex-direction: column;
+      gap: 0rem;
+    }
+    .text-content{
+      padding-bottom: 50px;
+    }
+    
+    .visual-content {
+      margin-top: 0rem;
+    }
+    
+    .visual-content::before,
+    .visual-content::after {
+      position: static;
+      display: inline-block;
+      margin: 0.5rem;
+    }
+  
+
+  }
+  
+  @media (max-width: 768px) {
+    .main-title {
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    
+
+  }
+  
+  @media (max-width: 576px) {
+    .main-title {
+      font-size: 2rem;
+    }
+    
+    .content-wrapper {
+      padding: 1rem;
+    }
+
+  }
+  
+
+
+
+
+
+
+  /* Boutons d'action */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: -1.2rem;
+    padding: 5px;
+  }
+
+
+  
+
+
+  .btn-primary1 {
+    background-color: #E7E9F2;
+    color: #1A1340;
+    border-radius: 12px;
+    border: 1px #1A1340 solid;
+  }
+  
+  .btn-primary1:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+  }
+
+  .btn-primary2 {
+    background-color: #E7E9F2;
+    color: #1A1340;
+    border-radius: 12px;
+    border: 1px #1A1340 solid;
+  }
+  
+  .btn-primary2:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+  }
+
+  .btn-primary3 {
+    background-color: #E7E9F2;
+    color: #1A1340;
+    border-radius: 12px;
+    border: 1px #1A1340 solid;
+  }
+  
+  .btn-primary3:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+  }
+
+  .btn-primary4 {
+    background-color: #E7E9F2;
+    color: #1A1340;
+    border-radius: 12px;
+    border: 1px #1A1340 solid;
+  }
+  
+  .btn-primary4:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+  }
+  
+  .btn-primary5 {
+    background-color: #E7E9F2;
+    color: #1A1340;
+    border-radius: 12px;
+    border: 1px #1A1340 solid;
+  }
+  
+  .btn-primary5:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+  }
+
+
+
+
+  
+  .btn-secondary {
+    background-color: #34dcb5;
+    color: #1A1340;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #32efc3;
+    transform: translateY(-2px);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* *********** cart ****************** */
+  /* From Uiverse.io by Kagamiie */ 
+.project-info {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    top: -50px;
+  }
+  
+  .project-title {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    /* white-space: nowrap; */
+    color: #1A1340;
+  }
+  
+  .lighter {
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #1A1340;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+  
+  /*DELETE THIS TWO LINE*/
+  .delete {
+    background-color: transparent;
+  }
+  
+  .card-img div {
+    width: 90%;
+  }
+  .projet-image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    transition: transform 0.1s ease-out; /* Animation fluide */
+  will-change: transform;
+  }
+  /*IF USING IMAGES*/
+  
+  .card {
+    background-color: white;
+    color: black;
+    width: 300px;
+    max-height: 330px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  
+  .card-img {
+    position: relative;
+    top: -20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Change the .card-img div to .card-img img to use img*/
+  .card-img a,
+  .card-img div {
+    height: 150px;
+    width: 90%;
+    /* Change this width here to change the width of the color/image */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  .card-imgs {
+    transition: all 0.5s;
+  }
+  
+  .btn-card{
+    background-color: #D4D6ED;
+    color: #1A1340;
+    padding: 0.8rem 1.1rem;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    width: 143px;
+  }
+
+  .btn-card:hover{
+    background-color: #e2e4eb;
+
+  }
+
+
+/* ************************* activation button ************************** */
+/* Couleur d'activation pour le bouton cliqué */
+  /* .btn:active {
+    background-color: #ffffff;
+} */
+.btn.active {
+    background-color: #D4D6ED;  /* Exemple de couleur (vert) */
+    border: none;
+}
+
+
+.btn .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #C95971; /* Couleur du point rouge */
+  border-radius: 50%;
+  margin-left: auto;
+}

@@ -1,0 +1,129 @@
+<!-- <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="#">Logo</a>
+      </div>
+      
+      <div class="navbar-toggle"  [ngClass]="{'active': isMenuOpen}" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      
+      <ul class="navbar-menu" [ngClass]="{'active': isMenuOpen}">
+        <li class="navbar-item">
+          <a routerLink="/home" class="navbar-link">Accueil</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">Services</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">À propos</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">Contact</a>
+        </li>
+        <li class="navbar-item navbar-btn">
+          <a href="#" class="button">S'inscrire</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  -->
+
+
+  <nav class="navbar" [class.navbar-mobile-open]="isMobileMenuOpen"  [class.hidden]="isNavbarHidden">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="#">
+          <div class="logo-circle">
+            <span>Logo</span>
+          </div>
+        </a>
+      </div>
+  
+      <button class="navbar-toggle"  [ngClass]="{'active': isMobileMenuOpen}" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+  
+      <div class="navbar-menu" [class.active]="isMobileMenuOpen">
+        <ul class="navbar-links">
+          <li class="navbar-item active"  title="Accueil">
+            <a href="#" class="navbar-link" *ngIf="selectedLanguage.code ==='fr'" >Accueil</a>
+            <a href="#" class="navbar-link"  *ngIf="selectedLanguage.code ==='en'">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link"*ngIf="selectedLanguage.code ==='fr'">À propos</a>
+            <a href="#" class="navbar-link"*ngIf="selectedLanguage.code ==='en'">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" *ngIf="selectedLanguage.code ==='fr'">Services</a>
+            <a href="#" class="navbar-link" *ngIf="selectedLanguage.code ==='en'">Services</a>
+          </li>
+          <li class="navbar-item dropdown">
+            <a href="#" class="navbar-link"  *ngIf="selectedLanguage.code ==='fr'">
+              Portfolio
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-icon">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </a>
+            <a href="#" class="navbar-link"  *ngIf="selectedLanguage.code ==='en'">
+              Portfolio
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-icon">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item" *ngIf="selectedLanguage.code ==='fr'">Projet 1</a>
+              <a href="#" class="dropdown-item" *ngIf="selectedLanguage.code ==='en'">Project 1</a>
+
+              <a href="#" class="dropdown-item"*ngIf="selectedLanguage.code ==='fr'">Projet 2</a>
+              <a href="#" class="dropdown-item"*ngIf="selectedLanguage.code ==='en'">Project 2</a>
+
+              <a href="#" class="dropdown-item" *ngIf="selectedLanguage.code ==='fr'">Projet 3</a>
+              <a href="#" class="dropdown-item" *ngIf="selectedLanguage.code ==='en'">Project 3</a>
+
+            </div>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link"  *ngIf="selectedLanguage.code ==='fr'">Offres</a>
+            <a href="#" class="navbar-link"  *ngIf="selectedLanguage.code ==='en'">Offers</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link"  *ngIf="selectedLanguage.code ==='fr'">Blog</a>
+            <a href="#" class="navbar-link"  *ngIf="selectedLanguage.code ==='en'">Blog</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link"  *ngIf="selectedLanguage.code ==='fr'">Contact</a>
+            <a href="#" class="navbar-link"  *ngIf="selectedLanguage.code ==='en'">Contact Us</a>
+          </li>
+        </ul>
+  
+        <div class="navbar-actions">
+          <div class="language-selector" (click)="toggleDropdown()">
+            <img [src]="selectedLanguage.flag" class="flag" alt="Flag" />
+            <span class="lang-code">{{ selectedLanguage.label }}</span>
+          
+            <div class="dropdownflag" *ngIf="showDropdown">
+              <div
+                class="dropdownflag-item"
+                *ngFor="let lang of languages"
+                (click)="selectLanguage(lang)">
+
+                <img [src]="lang.flag" class="flag" alt="{{ lang.code }} Flag" />
+                <span>{{ lang.label }}</span>
+              </div>
+            </div>
+
+          </div>
+          
+          <a href="#" class="cta-button"  *ngIf="selectedLanguage.code ==='fr'">Travaillons ensemble</a>
+          <a href="#" class="cta-button"  *ngIf="selectedLanguage.code ==='en'">Let's work together</a>
+        </div>
+      </div>
+    </div>
+  </nav>

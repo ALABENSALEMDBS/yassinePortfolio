@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+
+   @font-face {
+    font-family: 'Gilroy-Bold', 'Gilroy-Regular', 'Gilroy-SemiBold';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('/fonts/Gilroy-Regular.woff') format('woff'),
+         url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: #1a1a3a;
+  }
+  
+  /* Section principale */
+  .about-me-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  @media (max-height: 600px) {
+    .about-me-section {
+      align-items: flex-start; /* Évite que le contenu soit trop centré sur des écrans très petits */
+      padding-top: 12rem;
+    }
+  }
+  
+  
+  
+  /* Image de fond */
+  .grid-background-image {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    opacity: 25%;
+    z-index: 1;
+  }
+  
+  /* Conteneur principal */
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Première colonne (titre et citation) */
+  .column1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .main-title {
+    font-size: 3.5rem;
+    font-weight: 750;
+    color: #1A1340;
+    margin-bottom: 0.5rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #1A134080;
+    margin-bottom: 2rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+  
+  .quote {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1A1340;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 1rem;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+
+  }
+  
+  /* Conteneur de contenu */
+  .content-container {
+    display: flex;
+    width: 100%;
+    gap: 100px;
+    /* margin-bottom: 1rem; */
+  }
+  
+  /* Contenu textuel */
+  .text-content {
+    flex: 1;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  .bio p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #1A1340;
+    margin-bottom: 1.2rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+  
+  .bio strong {
+    color: #1A1340;
+    font-weight: 600;
+  }
+  
+  .objective {
+    margin-top: 1.5rem;
+  }
+  
+  /* Contenu visuel */
+  .visual-content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightbulb-image {
+    width: 315px;
+    height: 315px;
+    z-index: 2;
+    position: relative;
+
+    transition: transform 0.1s ease-out; /* Animation fluide */
+  will-change: transform;
+  }
+  
+  /* Flèches décoratives */
+  .decorative-arrow {
+    position: absolute;
+    width: 220px;
+    height: 66px;
+    z-index: 1;
+
+  }
+  
+  
+
+/* Animation de saut fluide et naturelle */
+@keyframes jump1 {
+    0%, 100% {
+      transform: translateY(0); /* Position initiale */
+    }
+    50% {
+      transform: translateY(-20px); /* Monte */
+    }
+}
+@keyframes jump2 {
+    0%, 100% {
+      transform: translateY(-20px); /* Position initiale */
+    }
+    50% {
+      transform: translateY(0); /* Monte */
+    }
+}
+
+  
+  .arrow1 {
+    top: 10%;
+    right: 0%;
+    animation: jump1 4s ease-in-out infinite alternate;
+
+  }
+  
+  .arrow2 {
+    bottom: 25%;
+    left: -8%;
+    animation: jump1 4s ease-in-out infinite alternate;
+
+  }
+  
+  .arrow3 {
+    top: 10%;
+    left: 0%;
+    animation: jump2 4s ease-in-out infinite alternate;
+
+  }
+  
+  .arrow4 {
+    bottom: 8%;
+    right: 5%;
+    animation: jump2 4s ease-in-out infinite alternate;
+
+  }
+  
+  
+  @media (max-width: 1300px) {
+    .decorative-arrow {
+      width: 200px;
+      height: 66px;
+    }
+  }
+  @media (max-width: 1250px) {
+    .decorative-arrow {
+      width: 190px;
+      height: 64px;
+    }
+    .arrow2 {
+      left: -19%;
+    }
+  }
+  
+  /* Boutons d'action */
+  .action-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+  }
+  
+  .btn-primary {
+    background-color: #47C9AA;
+    color: #1A1340;
+  }
+  
+  .btn-primary:hover {
+    background-color: #34dcb5;
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: #D4D6ED;
+    color: #1A1340;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #ced1f0;
+    transform: translateY(-2px);
+  }
+  
+  .arrow-icon {
+    margin-left: 0.5rem;
+  }
+  
+  /* Styles pour les tags autour de l'ampoule */
+  /* .visual-content::before {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    z-index: 3;
+  }
+  
+  .visual-content::after {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    z-index: 3;
+  } */
+  
+  /* Ajout des deux autres tags */
+  /* .lightbulb-image::before {
+    content: "Approche sur-mesure";
+    position: absolute;
+    bottom: 30%;
+    left: -120px;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    z-index: 3;
+  }
+  
+  .lightbulb-image::after {
+    content: "Collaboration transparente";
+    position: absolute;
+    bottom: 10%;
+    right: -150px;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    z-index: 3;
+  } */
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .content-container {
+      flex-direction: column;
+      gap: 0rem;
+    }
+    
+    .visual-content {
+      margin-top: 0rem;
+    }
+    
+    .visual-content::before,
+    .visual-content::after,
+    .lightbulb-image::before,
+    .lightbulb-image::after {
+      position: static;
+      display: inline-block;
+      margin: 0.5rem;
+    }
+  
+  
+    .decorative-arrow {
+      width: 200px;
+      height: 63px;
+    }
+    .arrow2 {
+      left: 10%;
+    }
+    .arrow1 {
+      right: 10%;
+    }
+    .arrow3 {
+      left: 15%;
+      
+    }
+    .arrow4 {
+      right: 15%;
+      
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-title {
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .quote {
+      font-size: 1.2rem;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .btn {
+      width: 100%;
+    }
+  
+  
+    .arrow2 {
+      left: -4%;
+    }
+    .arrow1 {
+      right: 5%;
+    }
+    .arrow3 {
+      left: 5%;
+      
+    }
+    .arrow4 {
+      right: 5%;
+      
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .main-title {
+      font-size: 2rem;
+    }
+    
+    .content-wrapper {
+      padding: 1rem;
+    }
+  
+    .decorative-arrow {
+      width: 170px;
+      height: 64px;
+    }
+    .arrow2 {
+      left: -14%;
+    }
+  }
+  

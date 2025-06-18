@@ -1,0 +1,89 @@
+<section class="about-me-section">
+
+    <img src="/images/filer.jpg" alt="Fond de grille" class="grid-background-image">
+    
+
+
+    <div class="content-wrapper">
+
+        <div class="column1"  *ngIf="selectlan=== 'fr'">
+            <h1 class="main-title">Qui suis-je ?</h1>
+            <h2 class="subtitle">mon histoire en tant que designer</h2>
+            <blockquote class="quote">
+                "Je transforme les idées en expériences visuelles engageantes"
+            </blockquote>
+        </div>
+
+        <div class="column1"  *ngIf="selectlan=== 'en'">
+          <h1 class="main-title">Who am I?</h1>
+          <h2 class="subtitle">my journey as a designer</h2>
+          <blockquote class="quote">
+            "I turn ideas into engaging visual experiences"
+          </blockquote>
+      </div>
+      <!-- Contenu principal -->
+        <div class="content-container">
+
+            <div class="text-content">
+
+                    <div class="bio"  *ngIf="selectlan=== 'fr'">
+                      <p>
+                        Je suis <strong>Yassine Ben Salem</strong>, designer UI/UX, graphiste et créateur vidéo basé en Tunisie.
+                      </p>
+                      <p>
+                        Avec plus de <strong>4 ans d'expérience</strong>, j'ai eu l'opportunité de collaborer avec des marques internationales, 
+                        notamment au Saudi Arabie, en France, en Portugal et en Tunisie.
+                      </p>
+            
+                      <p>Passionné par l'esthétique minimaliste et les expériences immersives, je conçois des interfaces modernes et des identités visuelles percutantes.</p>
+            
+                      <p class="objective">
+                        <strong>Mon objectif ?</strong> Créer des designs qui marquent et des expériences qui convertissent.
+                      </p>
+                    </div>
+
+                    <div class="bio" *ngIf="selectlan === 'en'">
+                      <p>
+                        I’m <strong>Yassine Ben Salem</strong>, a UI/UX designer, graphic artist, and video creator based in Tunisia.
+                      </p>
+                      <p>
+                        With over <strong>4 years of experience</strong>, I’ve had the opportunity to collaborate with international brands, 
+                        notably in Saudi Arabia, France, Portugal, and Tunisia.
+                      </p>
+                    
+                      <p>Passionate about minimalist aesthetics and immersive experiences, I design modern interfaces and impactful visual identities.</p>
+                    
+                      <p class="objective">
+                        <strong>My goal?</strong> To create designs that leave a mark and experiences that convert.
+                      </p>
+                    </div>
+                    
+            </div>
+
+            <div class="visual-content">
+                    <img src="/images/lamp.png" alt="Ampoule créative" class="lightbulb-image"   loading="lazy">
+                    
+                    <img src="/images/infol3.png" alt="Flèche décorative" class="decorative-arrow arrow1"  loading="lazy">
+                    <img src="/images/infol2.png" alt="Flèche décorative" class="decorative-arrow arrow2"  loading="lazy">
+                    <img src="/images/infol1.png" alt="Flèche décorative" class="decorative-arrow arrow3"  loading="lazy">
+                    <img src="/images/infol4.png" alt="Flèche décorative" class="decorative-arrow arrow4"  loading="lazy">
+            </div>
+
+        </div>
+      
+      <!-- Boutons d'action -->
+        <div class="action-buttons"  *ngIf="selectlan=== 'fr'">
+            <button class="btn btn-primary">Travaillons ensemble</button>
+            <button class="btn btn-secondary">En savoir plus <i class="arrow-icon">→</i></button>
+        </div>
+        <div class="action-buttons" *ngIf="selectlan === 'en'">
+          <button class="btn btn-primary">Let's work together</button>
+          <button class="btn btn-secondary">Learn more <i class="arrow-icon">→</i></button>
+        </div>
+        
+
+
+    </div>
+  </section>
+  
+  

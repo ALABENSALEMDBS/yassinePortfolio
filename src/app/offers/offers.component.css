@@ -1,0 +1,132 @@
+.card {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-bottom: 2rem;
+  width: 403px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  background-color:#D4D6ED;
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.title {
+  font-size: 12px;
+  line-height: 1rem;
+  font-weight: 700;
+  color: #1A1340;
+  font-family: 'Gilroy-SemiBold', sans-serif;
+
+}
+
+.price {
+  font-size: 32px;
+  line-height: 3rem;
+  font-weight: 700;
+  color: #1A1340;
+  font-family: 'Gilroy-SemiBold', sans-serif;
+}
+.price-box {
+    text-align: start;
+    padding-top: 32px;
+    margin-bottom: 50px;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+
+  }
+
+  .amount {
+    font-size: 48px;
+    color: #3E6EFF; /* Bleu vif */
+    font-weight: bold;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+
+  }
+
+  .currency {
+    font-size: 30px;
+    color: #3772FF;
+    font-weight: 500;
+    position: relative;
+    top: -20px;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+
+  }
+
+  .note {
+    font-size: 16px;
+    color: #1A134080; /* Gris clair */
+    margin-top: 0px;
+  }
+
+.list span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  font-family: 'Gilroy-SemiBold', sans-serif;
+  font-weight: 400;
+}
+
+.desc {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.625;
+  color: rgba(156, 163, 175, 1);
+}
+
+.lists {
+  margin-bottom: 1.5rem;
+  flex: 1 1 0%;
+  color: #1A1340;
+  padding: 0 0 0 0;
+}
+
+.lists .list {
+  margin-bottom: 0.5rem;
+  display: flex;
+  margin-left: -0.2rem
+}
+
+.lists .list svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  color: #1A1340;
+}
+
+.action {
+  border: none;
+  outline: none;
+  display: inline-block;
+  border-radius: 12px;
+  background-color:#1A1340;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #EAF0FE;
+  margin-top: 0px;
+  width: 325px;
+  height: 52px;
+}
+
+
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

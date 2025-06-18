@@ -1,0 +1,183 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: #1a1a3a;
+    background-color: #f2f3f7; /* Fond général */
+}
+
+/* Section principale */
+.about-me-section {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 350px;
+    background-color: #E9EAF1;
+    border-radius: 20px;
+}
+
+/* Conteneur principal */
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+
+
+/* Première colonne (titre et texte) */
+.column1 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    max-width: 60%;
+}
+
+.main-title {
+    font-size: 48px;
+    color: #EAF0FE;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: 700;
+
+}
+
+.column1 p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #EAF0FE;
+    margin: 15px 0;
+    font-family: 'Gilroy-Regular', sans-serif;
+    font-weight: 400;
+
+}
+
+/* Bouton CTA */
+.cta-button {
+    background-color: #47C9AA;
+    color: #1A1340;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 202px;
+    height: 62px;
+}
+
+.cta-button:hover {
+    background-color: #68efcf;
+}
+
+/* Image QR Code */
+.qr-image {
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+}
+.qr-image:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Image de fond */
+.grid-background-image {
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 40px;
+}
+
+/* Responsive */
+@media (max-width: 1450.5px) {
+    .qr-image {
+        right: 25px;
+        bottom: 12px;
+    }
+}
+@media (max-width: 1146px) {
+    .qr-image {
+        bottom: 15px;
+    }
+}
+
+
+@media (max-width: 960px) {
+    .about-me-section {
+        height: 320px;
+        height: auto;
+
+    }
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .column1 {
+        max-width: 100%;
+        align-items: center;
+    }
+    .qr-image {
+        position: relative;
+        top: 20px;
+        bottom: 0px;
+        height: 120px;
+        width: 150px;
+        left: 0px;
+    }
+}
+
+@media (max-width: 580px) {
+    .about-me-section {
+        height: auto;
+        padding: 20px 0;
+    }
+    .main-title {
+        font-size: 24px;
+    }
+    .column1 p {
+        font-size: 14px;
+    }
+    .cta-button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+    /* .qr-image {
+        max-width: 100px;
+    } */
+}
+
+
+
+
+
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+

@@ -1,0 +1,28 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #d9daff;
+    color: #6D74F2;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 4px 4px 12px rgba(50, 49, 49, 0.278);
+    z-index: 9999;
+    transition: background 0.1s ease-in-out;
+}
+
+.scroll-to-top:hover {
+  background: #6D74F2;
+}
+
+.scroll-to-top svg {
+  transition: stroke 0.1s ease-in-out;
+}
+
+.scroll-to-top:hover svg {
+  stroke: rgb(255, 255, 255); /* Change la couleur de l'icône en rouge au survol */
+}
+  

@@ -1,0 +1,253 @@
+
+<!-- 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<div class="container-home">
+
+    <div class="home-container">
+        <img src="images/shop.png" alt="Image d'accueil" class="home-image" />
+    </div>
+
+
+
+
+    <div class="cards-container">
+        <div class="card">
+          <div class="icon"><i class="fas fa-hand-paper"></i></div>
+          <h3>SAPIEN TEMPOR PLACERAT</h3>
+          <div class="underline"></div>
+          <p>Luctus mauris lectus elementum nulla ac consectetur sapien leo et arcu maecenas auctor viverra magna sed.</p>
+        </div>
+      
+        <div class="card dark">
+          <div class="icon red"><i class="fas fa-microphone"></i></div>
+          <h3>BLANDIT URNA FUSCE</h3>
+          <div class="underline"></div>
+          <p>In augue blandit ligula pharetra mattis vestibulum congue enim aenean felis augue pretium semper imperdiet.</p>
+        </div>
+      
+        <div class="card">
+          <div class="icon"><i class="fas fa-moon"></i></div>
+          <h3>QUIS EUISMOD MALESUADA</h3>
+          <div class="underline"></div>
+          <p>Purus morbi ut risus nec orci bibendum commodo phasellus fringilla pede vitae tincidunt congue nibh lobortis.</p>
+        </div>
+      </div>
+      
+
+
+
+
+ <button popovertarget="myModal">Modal</button>
+
+ <div id="myModal" popover="auto" class="modal-popover">
+  <div class="modal-header">
+      <h2>Modal Title</h2>
+      <button popovertarget="myModal" popovertargetaction="hide" class="close-button">
+          <i class="fas fa-times"></i>
+      </button>
+  </div>
+  <div class="modal-content">
+      <p>This is a modal using the HTML popover attribute</p>
+      <p>No JavaScript required!</p>
+  </div>
+  
+</div>
+
+  <p>home works!</p>
+  <p>home works!</p>
+  <p>home works!</p>
+ 
+
+
+
+</div> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<body>
+
+
+
+
+  <div class="container-home">
+
+        <div class="home-container">
+            <img src="/images/filer.jpg" alt="Image d'accueil" class="home-image" />
+        </div>
+
+        <div class="home-container">
+            <img src="/images/filer.jpg" alt="Image d'accueil" class="home-image2" />
+        </div>
+
+        <div class="banner">
+          <h1 class="main-heading"  *ngIf="selectlan=== 'fr'">Je transforme vos idées en <br> designs exceptionnels.</h1>
+          <h1 class="main-heading"  *ngIf="selectlan=== 'en'">I transform your ideas into <br> exceptional designs.</h1>
+
+          <h2 class="sub-heading"  *ngIf="selectlan=== 'fr'">UI/UX | Branding | Vidéo Créative</h2>
+          <h2 class="sub-heading"  *ngIf="selectlan=== 'en'">UI/UX | Branding | Creative Video</h2>
+
+        </div>
+
+        <div class="button-container">
+          <button class="button button-primary"  *ngIf="selectlan=== 'fr'">Travaillons ensemble</button>
+          <button class="button button-primary"  *ngIf="selectlan=== 'en'">Let's work together</button>
+
+          <button class="button button-secondary"  *ngIf="selectlan=== 'fr'">Prendre RDV</button>
+          <button class="button button-secondary"  *ngIf="selectlan=== 'en'">Make an appointment</button>
+
+        </div>
+
+
+
+
+        <div class="stats-container">
+          <div class="stat-card">
+
+            <div class="icon-container green-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" >
+                  <g fill="none" fill-rule="evenodd">
+                      <path d="M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z"/>
+                      <path fill="#47C9AA" d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798 5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176zM12 4.987 9.687 8.959a1.25 1.25 0 0 1-.816.592l-4.492.973 3.062 3.427c.234.262.347.61.312.959l-.463 4.573 4.206-1.854a1.25 1.25 0 0 1 1.008 0l4.206 1.854-.463-4.573a1.25 1.25 0 0 1 .311-.959l3.063-3.427-4.492-.973a1.25 1.25 0 0 1-.816-.592z"/>
+                  </g>
+              </svg>
+            </div>
+          
+              <div class="stat-content"  *ngIf="selectlan=== 'fr'">
+                  <div class="stat-number">4 <span style="font-size: 20px; font-weight: 700;">ans</span></div>
+                  <div class="stat-text"> d'expérience</div>
+              </div>
+              <div class="stat-content"  *ngIf="selectlan=== 'en'">
+                <div class="stat-number">4 <span style="font-size: 20px; font-weight: 700;">years</span></div>
+                <div class="stat-text"> of experience</div>
+            </div>
+          </div>
+          
+
+
+          <div class="stat-card">
+
+            <div class="icon-container purple-bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <g fill="none" fill-rule="evenodd">
+                      <path d="M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z"/>
+                      <path fill="#6D74F2" d="M13.232 1.36c.632-.758 1.863-.24 1.763.742L14.289 9H20a1 1 0 0 1 .768 1.64l-10 12c-.632.758-1.863.24-1.763-.742L9.711 15H4a1 1 0 0 1-.768-1.64zM6.135 13h5.348a.4.4 0 0 1 .398.44l-.553 5.405L17.865 11h-5.348a.4.4 0 0 1-.398-.44l.553-5.404z"/>
+                  </g>
+              </svg>
+            </div>
+          
+              <div class="stat-content"  *ngIf="selectlan=== 'fr'">
+                  <div class="stat-number">30 <span style="font-size: 24px; font-weight: 700;">+</span></div>
+                  <div class="stat-text">projets réalisés</div>
+              </div>
+              <div class="stat-content"  *ngIf="selectlan=== 'en'">
+                <div class="stat-number">30 <span style="font-size: 24px; font-weight: 700;">+</span></div>
+                <div class="stat-text">completed projects</div>
+            </div>
+          </div>
+          
+
+
+          <div class="stat-card">
+              <div class="icon-container pink-bg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M24 0v24H0V0zM12.594 23.258l-.012.002-.071.035-.02.004-.014-.004-.071-.036c-.01-.003-.019 0-.024.006l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113-.014.002-.184.093-.01.01-.003.011.018.43.005.012.008.008.201.092c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.003-.011.018-.43-.003-.012-.01-.01z"/>
+                        <path fill="#C95971" d="M11 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6M6 7a5 5 0 1 1 10 0A5 5 0 0 1 6 7M4.413 17.601c-.323.41-.413.72-.413.899 0 .122.037.251.255.426.249.2.682.407 1.344.582C6.917 19.858 8.811 20 11 20c.222 0 .441-.002.658-.005a1 1 0 0 1 .027 2c-.226.003-.455.005-.685.005-2.229 0-4.335-.14-5.913-.558-.785-.208-1.524-.506-2.084-.956C2.41 20.01 2 19.345 2 18.5c0-.787.358-1.523.844-2.139.494-.625 1.177-1.2 1.978-1.69C6.425 13.695 8.605 13 11 13c.447 0 .887.024 1.316.07a1 1 0 0 1-.211 1.989C11.745 15.02 11.375 15 11 15c-2.023 0-3.843.59-5.136 1.379-.647.394-1.135.822-1.45 1.222Zm14.451-3.604a1 1 0 0 0-1.728 0l-.91 1.562-1.766.382a1 1 0 0 0-.534 1.644l1.204 1.348-.182 1.798a1 1 0 0 0 1.398 1.016l1.654-.73 1.654.73a1 1 0 0 0 1.398-1.016l-.182-1.799 1.204-1.347a1 1 0 0 0-.534-1.644l-1.766-.382zm-1.131 2.949.267-.46.267.46a1 1 0 0 0 .653.474l.52.112-.355.397a1 1 0 0 0-.25.767l.054.528-.486-.214a1 1 0 0 0-.806 0l-.486.214.053-.528a1 1 0 0 0-.25-.767l-.353-.397.52-.112a1 1 0 0 0 .652-.474"/></g>
+                      </svg>
+              </div>
+              <div class="stat-content"  *ngIf="selectlan=== 'fr'" >
+                  <div class="stat-number" style="font-size: 17px; font-weight: 600; margin-top: 0px;">Clients en</div>
+                  <div class="stat-text" style="margin-top: 10px;" >France, Tunisie,<br> Portugal, Saudi</div>
+              </div>
+              <div class="stat-content"  *ngIf="selectlan=== 'en'" >
+                <div class="stat-number" style="font-size: 17px; font-weight: 600; margin-top: 0px;">Customers in</div>
+                <div class="stat-text" style="margin-top: 10px;" >France, Tunisia,<br> Portugal, Saudi</div>
+            </div>
+          </div>
+
+
+
+          <div class="banner-container">
+            <div class="black-band"></div>
+            <div class="blue-band">
+              <div class="logo-container">
+                <div class="logo-scroll">
+                  <ng-container *ngFor="let logo of logos">
+                    <div class="logo-item">
+                      <img [src]="logo.imagePath" [alt]="logo.name" class="logo-image">
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+      </div>
+
+
+
+
+      <div class="mobile-left">
+        <img src="/images/mobileph.svg" alt="Image d'accueil" class="mobile" />
+    </div>
+
+    <div class="artist-right">
+      <img src="/images/Artist.svg" alt="Image d'accueil" class="mobile" />
+    </div>
+
+
+
+
+      <div class="visualcod-left">
+          <img src="/images/visualcod.svg" alt="Image d'accueil" class="iconmove" />
+      </div>
+
+      <div class="figma-left">
+        <img src="/images/figma.svg" alt="Image d'accueil" class="iconmove" />
+      </div>
+
+      <div class="premierpro-left">
+        <img src="/images/premierpro.svg" alt="Image d'accueil" class="iconmove" />
+      </div>
+
+      <div class="psd-right">
+        <img src="/images/psd.svg" alt="Image d'accueil" class="iconmove" />
+      </div>
+
+      <div class="aftereffect-right">
+        <img src="/images/aftereffect.svg" alt="Image d'accueil" class="iconmove" />
+      </div>
+
+      <div class="illustrator-right">
+        <img src="/images/illustrator.svg" alt="Image d'accueil" class="iconmove" />
+      </div>
+
+
+
+
+      
+
+
+
+
+
+  </div>
+
+
+
+  
+  <div class="hhh">
+
+
+     <!-- <div>
+      <h1>Qui suis-je ?</h1>
+    </div> -->
+    <app-qui-suis-je></app-qui-suis-je>
+  </div> 
+
+  
+</body>
+

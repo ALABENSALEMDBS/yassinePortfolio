@@ -1,0 +1,230 @@
+
+
+  /* Styles généraux */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Gilroy-Bold', sans-serif;
+  }
+  
+  /* Section principale */
+  .about-me-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  
+  /* Conteneur principal */
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1270px;
+    width: 100%;
+    /* flex-direction: column; */
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap; /* Permet le retour à la ligne si l'écran est petit */
+    justify-content: center; /* Centre les cartes */
+    gap: 16px; /* Espacement entre les cartes */
+}
+  
+  /* Première colonne (titre et citation) */
+  .column1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-title {
+    font-size: 3.5rem;
+    font-weight: 750;
+    color: #1A1340;
+    margin-bottom: 0.5rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #1A134080;
+    margin-bottom: 2rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+
+
+
+/* From Uiverse.io by Samalander0 */ 
+.card {
+    width: 320px;
+    background: #F9FFFF;
+    color: black;
+    position: relative;
+    border-radius: 25px;
+    padding: 2em;
+    transition: transform 0.4s ease;
+
+    /* flex: 1 1 300px; Permet aux cartes de s'adapter à l'écran */
+    /* max-width: 320px; Largeur max des cartes */
+
+  }
+  
+  .card .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5em;
+    height: 100%;
+    transition: transform 0.4s ease;
+  }
+  
+  .card .card-top, .card .card-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card .card-top p, .card .card-top .card-title, .card .card-bottom p, .card .card-bottom .card-title {
+    margin: 0;
+  }
+  
+  .card{
+    font-weight: bold;
+  }
+  .card-title {
+    font-size: 12px; /* Taille du texte */
+    font-weight: 400; /* Texte en gras */
+    color: #1A1340; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    margin: 10px 0; /* Marge autour du texte */
+    font-family: 'Gilroy-Bold', sans-serif;
+
+}
+  
+  .card .card-top p, .card {
+    font-weight: 600;
+  }
+  
+  .card .card-bottom {
+    align-items: flex-end;
+  }
+
+  .card-bottom p  {
+    font-size: 12px; /* Taille du texte */
+    font-weight: 400; /* Poids du texte */
+    color: #1A1340; /* Couleur du texte (gris) */
+    text-align: center; /* Centrage du texte */
+    margin: 5px 0; /* Marge autour du texte */
+    font-family: 'Gilroy-Regular', sans-serif;
+  }
+  
+  .card .card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+  }
+  
+  /* .card .card-image svg {
+    width: 4em;
+    height: 4em;
+    transition: transform 0.4s ease;
+  } */
+
+  .card-image p {
+    font-size: 24px; /* Taille du texte */
+    font-weight: 600; /* Texte en gras */
+    color: #1A1340; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    margin: 10px 0; /* Marge autour du texte */
+    font-family: 'Gilroy-Bold', sans-serif;
+
+  }
+  
+  .card:hover {
+    cursor: pointer;
+    transform: scale(0.97);
+  }
+  
+  .card:hover .card-content {
+    transform: scale(0.96);
+  }
+  
+  .card:hover .card-image svg {
+    transform: scale(1.05);
+  }
+  
+  .card:active {
+    transform: scale(0.9);
+  }
+  
+    
+
+
+
+
+/* ************* popup ******************** */
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+}
+
+.modal-content {
+    width: 70%;
+    height: 70%;
+    background: #E7E9F2;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 12.5%;
+    right: 14.5%;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #d9daff;
+    color: #6D74F2;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.close:hover {
+    background-color: #6D74F2;
+    color: #d9daff;
+
+}
+
+

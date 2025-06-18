@@ -1,0 +1,284 @@
+
+<!-- <body> -->
+  <div class="container">
+    <div class="loader">
+      <!-- Gradient definitions - One for each letter -->
+      <svg class="absolute" width="0" height="0">
+        <defs>
+          <!-- Y - Red to Orange -->
+          <linearGradient
+            id="y-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#FF3D00"></stop>
+            <stop offset="1" stop-color="#FF9100"></stop>
+          </linearGradient>
+          
+          <!-- A - Orange to Yellow -->
+          <linearGradient
+            id="a-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#FFC800"></stop>
+            <stop offset="1" stop-color="#FFEB3B"></stop>
+          </linearGradient>
+          
+          <!-- S1 - Yellow to Green -->
+          <linearGradient
+            id="s1-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#CDDC39"></stop>
+            <stop offset="1" stop-color="#4CAF50"></stop>
+          </linearGradient>
+          
+          <!-- S2 - Green to Teal -->
+          <linearGradient
+            id="s2-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00BFA5"></stop>
+            <stop offset="1" stop-color="#00E5FF"></stop>
+          </linearGradient>
+          
+          <!-- I - Teal to Blue -->
+          <linearGradient
+            id="i-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B0FF"></stop>
+            <stop offset="1" stop-color="#2979FF"></stop>
+          </linearGradient>
+          
+          <!-- N - Blue to Purple -->
+          <linearGradient
+            id="n-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#3D5AFE"></stop>
+            <stop offset="1" stop-color="#7C4DFF"></stop>
+          </linearGradient>
+          
+          <!-- E - Purple to Pink -->
+          <linearGradient
+            id="e-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#AA00FF"></stop>
+            <stop offset="1" stop-color="#FF00FF"></stop>
+          </linearGradient>
+          
+          <!-- Circle gradients - Each with a unique color -->
+          <linearGradient
+            id="outer-circle-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#FF0000"></stop>
+            <stop offset="1" stop-color="#FF9100"></stop>
+            <animateTransform
+              attributeName="gradientTransform"
+              type="rotate"
+              values="0 32 32;360 32 32"
+              dur="8s"
+              repeatCount="indefinite"
+            ></animateTransform>
+          </linearGradient>
+          
+          <linearGradient
+            id="middle-circle-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00E676"></stop>
+            <stop offset="1" stop-color="#00BFA5"></stop>
+            <animateTransform
+              attributeName="gradientTransform"
+              type="rotate"
+              values="0 32 32;-360 32 32"
+              dur="8s"
+              repeatCount="indefinite"
+            ></animateTransform>
+          </linearGradient>
+          
+          <linearGradient
+            id="inner-circle-gradient"
+            x1="0"
+            y1="62"
+            x2="0"
+            y2="2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#7C4DFF"></stop>
+            <stop offset="1" stop-color="#D500F9"></stop>
+            <animateTransform
+              attributeName="gradientTransform"
+              type="rotate"
+              values="0 32 32;360 32 32"
+              dur="8s"
+              repeatCount="indefinite"
+            ></animateTransform>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <!-- Y -->
+      <svg viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          pathLength="360"
+          d="M8 3.25L22 20.25L36 3.25M22 20.25V37.5"
+          class="dash y-color"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+
+      <!-- A -->
+      <svg viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          pathLength="360"
+          d="M22 3.25L3.25 37.5H11L15 30H29L33 37.5H40.75L22 3.25ZM18 23L22 15L26 23H18Z"
+          class="dash a-color"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+
+      <!-- S -->
+      <svg viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          pathLength="360"
+          d="M31.4 10.5C31.4 6.5 28.4 3.25 22 3.25C15.6 3.25 12.6 6.5 12.6 10.5C12.6 14.5 15.6 17.75 22 17.75C28.4 17.75 31.4 21 31.4 25C31.4 29 28.4 32.25 22 32.25C15.6 32.25 12.6 29 12.6 25"
+          class="dash s1-color"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+
+      <!-- S -->
+      <svg viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          pathLength="360"
+          d="M31.4 10.5C31.4 6.5 28.4 3.25 22 3.25C15.6 3.25 12.6 6.5 12.6 10.5C12.6 14.5 15.6 17.75 22 17.75C28.4 17.75 31.4 21 31.4 25C31.4 29 28.4 32.25 22 32.25C15.6 32.25 12.6 29 12.6 25"
+          class="dash s2-color"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+
+      <!-- I -->
+      <svg viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          pathLength="360"
+          d="M22 3.25V37.5"
+          class="dash i-color"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+
+      <!-- N -->
+      <svg viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          pathLength="360"
+          d="M8 37.5V3.25M8 3.25L36 37.5M36 37.5V3.25"
+          class="dash n-color"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+
+      <!-- E -->
+      <svg viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          pathLength="360"
+          d="M32 3.25H8V37.5H32M8 20.375H28"
+          class="dash e-color"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+      
+      <div class="w-2"></div>
+    </div>
+    
+    <!-- Spinning Circle -->
+    <div class="circle-container">
+      <svg class="spinning-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer circle - Red/Orange -->
+        <circle 
+          cx="50" 
+          cy="50" 
+          r="45" 
+          fill="none" 
+          stroke-width="4" 
+          class="outer-circle-color spin-circle"
+          pathLength="360"
+        />
+        
+        <!-- Middle circle - Green -->
+        <circle 
+          cx="50" 
+          cy="50" 
+          r="30" 
+          fill="none" 
+          stroke-width="4" 
+          class="middle-circle-color spin-circle-reverse"
+          pathLength="360"
+        />
+        
+        <!-- Inner circle - Purple -->
+        <circle 
+          cx="50" 
+          cy="50" 
+          r="15" 
+          fill="none" 
+          stroke-width="4" 
+          class="inner-circle-color spin-circle"
+          pathLength="360"
+        />
+      </svg>
+    </div>
+  </div>
+<!-- </body> -->

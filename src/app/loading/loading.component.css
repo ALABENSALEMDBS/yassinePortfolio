@@ -1,0 +1,166 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.loader svg {
+  margin: 0 5px;
+  width: 44px;
+  height: 54px;
+  /* border: 1px black solid; */
+}
+
+.absolute {
+  position: absolute;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.w-2 {
+  width: 0.5em;
+}
+
+/* Circle Container */
+.circle-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.spinning-circle {
+  width: 100px;
+  height: 100px;
+}
+
+/* Animations */
+.dash {
+  animation: dashArray 2s ease-in-out infinite, dashOffset 2s linear infinite;
+}
+
+.spin {
+  animation: spinDashArray 2s ease-in-out infinite, spin 8s ease-in-out infinite, dashOffset 2s linear infinite;
+  transform-origin: center;
+}
+
+.spin-circle {
+  animation: spin 4s linear infinite, dashArray 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.spin-circle-reverse {
+  animation: spinReverse 3s linear infinite, dashArray 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes dashArray {
+  0% {
+    stroke-dasharray: 0 1 359 0;
+  }
+  50% {
+    stroke-dasharray: 0 359 1 0;
+  }
+  100% {
+    stroke-dasharray: 359 1 0 0;
+  }
+}
+
+@keyframes spinDashArray {
+  0% {
+    stroke-dasharray: 270 90;
+  }
+  50% {
+    stroke-dasharray: 0 360;
+  }
+  100% {
+    stroke-dasharray: 270 90;
+  }
+}
+
+@keyframes dashOffset {
+  0% {
+    stroke-dashoffset: 365;
+  }
+  100% {
+    stroke-dashoffset: 5;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Letter Colors */
+.y-color {
+  stroke: url(#y-gradient);
+}
+
+.a-color {
+  stroke: url(#a-gradient);
+}
+
+.s1-color {
+  stroke: url(#s1-gradient);
+}
+
+.s2-color {
+  stroke: url(#s2-gradient);
+}
+
+.i-color {
+  stroke: url(#i-gradient);
+}
+
+.n-color {
+  stroke: url(#n-gradient);
+}
+
+.e-color {
+  stroke: url(#e-gradient);
+}
+
+/* Circle Colors */
+.outer-circle-color {
+  stroke: url(#outer-circle-gradient);
+}
+
+.middle-circle-color {
+  stroke: url(#middle-circle-gradient);
+}
+
+.inner-circle-color {
+  stroke: url(#inner-circle-gradient);
+}

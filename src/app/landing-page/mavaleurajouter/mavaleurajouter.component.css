@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+
+   @font-face {
+    font-family: 'Gilroy-Bold', 'Gilroy-Regular', 'Gilroy-SemiBold';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('/fonts/Gilroy-Regular.woff') format('woff'),
+         url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Gilroy-Bold', sans-serif;
+    color: #1a1a3a;
+  }
+  
+  /* Section principale */
+  .about-me-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  @media (max-height: 600px) {
+    .about-me-section {
+      align-items: flex-start; /* Évite que le contenu soit trop centré sur des écrans très petits */
+      /* padding-top: 12rem; */
+    }
+  }
+  
+  
+  
+  /* Image de fond */
+  .grid-background-image {
+    transform: rotate(180deg);
+
+    position: absolute;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    opacity: 25%;
+    z-index: 1;
+  }
+  
+  /* Conteneur principal */
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Première colonne (titre et citation) */
+  .column1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .main-title {
+    font-size: 3.5rem;
+    font-weight: 750;
+    color: #1A1340;
+    margin-bottom: 0.5rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #1A134080;
+    margin-bottom: 2rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+  
+  .quote {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1A1340;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 1rem;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+
+  }
+  
+  /* Conteneur de contenu */
+  .content-container {
+    display: flex;
+    width: 100%;
+    gap: 100px;
+    /* margin-bottom: 1rem; */
+  }
+  
+  /* Contenu textuel */
+  .text-content {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 999;
+  }
+  
+  .bio p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #1A1340;
+    margin-bottom: 1.2rem;
+    font-family: 'Gilroy-Regular', sans-serif;
+
+  }
+  
+  .bio strong {
+    color: #1A1340;
+    font-weight: 600;
+  }
+  
+  .objective {
+    margin-top: 1.5rem;
+  }
+  
+
+  
+
+/* Animation de saut fluide et naturelle */
+@keyframes jump1 {
+    0%, 100% {
+      transform: translateY(0); /* Position initiale */
+    }
+    50% {
+      transform: translateY(-20px); /* Monte */
+    }
+}
+@keyframes jump2 {
+    0%, 100% {
+      transform: translateY(-20px); /* Position initiale */
+    }
+    50% {
+      transform: translateY(0); /* Monte */
+    }
+}
+
+
+  
+  /* Boutons d'action */
+  .action-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 40px;
+  }
+  
+  .btn {
+    
+    padding: 0.8rem 1.5rem;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+  }
+  
+  .btn-primary {
+    background-color: #47C9AA;
+    color: #1A1340;
+  }
+  
+  .btn-primary:hover {
+    background-color: #34dcb5;
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: #6D74F2;
+    color: #EAF0FE;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #888ef8;
+    transform: translateY(-2px);
+  }
+  
+  
+  
+  
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .content-container {
+      flex-direction: column;
+      gap: 0rem;
+    }
+
+  }
+  
+  @media (max-width: 768px) {
+    .main-title {
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .quote {
+      font-size: 1.2rem;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .btn {
+      width: 100%;
+    }
+  
+  }
+  
+  @media (max-width: 576px) {
+    .main-title {
+      font-size: 2rem;
+    }
+    
+    .content-wrapper {
+      padding: 1rem;
+    }
+
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  
+.stat-card {
+    flex: 1;
+    width: 450px; /* Largeur fixe */
+    min-width: 310px; /* Empêche la réduction */
+    max-width: 450px; /* Empêche l'élargissement */
+    height: 133px;
+    background-color: #DEE0F2;
+    border: 1px solid #6D74F2;
+    border-radius: 20px;
+    padding: 20px 0px 20px 22px;
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    
+  }
+
+  
+.icon-container {
+    width: 48px;  /*hhhhhhhhhhhhhhhhhhhhhhhh*/
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: #EAF0FE;
+
+    
+  }
+
+  .purple-bg {
+    color: #7b61ff;
+  
+  }
+
+  .stat-content {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px red solid; */
+    padding: 0px;
+    padding-top: 14px;
+  
+  }
+
+  .stat-number {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a3a;
+    line-height: 1.1;
+    margin-top: -10px;
+    font-family: 'Gilroy-Bold', sans-serif;
+  
+  }
+
+  .stat-text {
+    font-size: 13px;
+    color: #1A1340;
+    font-weight: 400;
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    padding-top: 10px;
+  
+  }
+
+
+
+
+
+
+
+
+
+
+  .stat-card:hover {
+    transform: translateY(-5px); /* Léger déplacement vers le haut */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Ombre portée */
+    border-color: #b8c4f0; /* Bordure légèrement plus foncée */
+    background-color: #ECF1FD; /* Fond plus clair */
+  }
+  
+  .stat-card:hover .icon-container {
+    transform: scale(1.1); /* Légère augmentation de taille */
+    background-color: #DEE0F2;
+  
+}
+  
+  .icon-container {
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-card:hover .stat-number {
+    color: #1a1a3a; /* Couleur plus foncée pour le nombre */
+    transform: scale(1.05); /* Légère augmentation de taille */
+  }
+  
+  .stat-number {
+    transition: all 0.3s ease;
+  }
+  
+  .stat-card:hover::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: inherit;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, #6D74F2, #47C9AA, #C95971, #1A1340) border-box;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) padding-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .stat-card:hover::before {
+    opacity: 1;
+  }
+  
+
